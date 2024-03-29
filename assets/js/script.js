@@ -43,7 +43,8 @@ function runGame(gameType) {
 	} else if (gameType === "subtract") {
 		displaySubtractQuestion(num1, num2);
 	} else if (gameType === "division") {
-	    num2 = Math.floor(num2/5) + 1;
+	    num1 = Math.floor(num1/2) + 1;
+	    num2 = Math.floor(num2/2) + 1;
 	    num1 = num1 * num2;
         displayDivisionQuestion(num1, num2);
     } else {
