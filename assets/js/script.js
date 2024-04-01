@@ -66,10 +66,13 @@ function checkAnswer() {
 	if (isCorrect) {
 		alert("Hey! You got it right! :D");
 		incrementScore();
-	} else {
-		alert(`Awwww...you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+	} else if (isNaN(userAnswer)) {
+		alert(`Awwww...Thats not a number! The correct answer was ${calculatedAnswer[0]}!`);
 		incrementWrongAnswer();
-	}
+	} else {
+		console.log(userAnswer);
+		alert(`Awwww...you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+		incrementWrongAnswer();}
 
 	runGame(calculatedAnswer[1]);
 
